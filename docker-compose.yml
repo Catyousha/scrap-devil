@@ -1,0 +1,18 @@
+# tor proxy still not implemented due to developer's skill issue 💀
+services:
+  # tor:
+  #   image: peterdavehello/tor-socks-proxy
+  #   ports:
+  #     - 9150:9150
+
+  web:
+    image: scrap-devil:Dockerfile
+    restart: always
+    environment:
+      SECRET_KEY_BASE: "gRcP4GvKZLEeKoh1TZSxsPiCLA55XaXt7D1ZsZvbSShTLzjZACz7mbmh8qxaIfGq"
+      # USING_TOR: "true"
+    ports:
+      - 4000:4000
+    # depends_on:
+    #   tor:
+    #     condition: service_healthy
